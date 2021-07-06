@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "9d99cf4d-d3bf-4eca-8059-1aa7097463c7",
+		"name": "Fantasy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\":\"pass\",\n    \"email\":\"user@gmail.com\",\n    \"username\":\"user\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8085/fantasy/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"fantasy",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\":\"pass\",\n    \"username\":\"user\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8085/fantasy/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"fantasy",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put on Transfer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNjI1NjU2NDEyfQ.oDOeNkb2eWKluvNlURIB_tx85AT_REUtnQ8tVMpVx_6yzeRzhF2aBcpZVnAjrFgyJJNIp0Gwc8pViB1iMdY06Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"transferPrice\":1000000,\n    \"player\":{\"playerId\":3}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8085/fantasy/transfer/put",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"fantasy",
+						"transfer",
+						"put"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List transfers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNjI1NjU2NDEyfQ.oDOeNkb2eWKluvNlURIB_tx85AT_REUtnQ8tVMpVx_6yzeRzhF2aBcpZVnAjrFgyJJNIp0Gwc8pViB1iMdY06Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8085/fantasy/transfer/list",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"fantasy",
+						"transfer",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMSIsImV4cCI6MTYyNTY1NjYyMH0.MNJsgUiVGEfDhttp7xxu65txBv0gJXF5t3scv7XPlPtoY9wzc3Q5BX-ZfBL7xa97meDvrXcJj6B5NTbkkyWOlw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"teamName\":\"Team 1603464146705\",\n    \"country\":\"Jordan\",\n    \"value\":1100000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8085/fantasy/transfer/buy/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"fantasy",
+						"transfer",
+						"buy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
