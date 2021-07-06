@@ -39,7 +39,7 @@ public class UserService implements UserDetailsService {
             throw new ApiException("User with provided email address already exists");
         });
 
-        userOptional = userRepository.findByEmail(user.getEmail());
+        userOptional = userRepository.findByUsername(user.getUsername());
 
         userOptional.ifPresent(value -> {
             throw new ApiException("username is already in use");

@@ -22,14 +22,12 @@ import static ge.chalauri.fantasy.security.utils.SecurityConstants.SIGN_UP_URL;
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final UserService userService;
-//    private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Value(value = "${fantasy.app.jwtExpirationMs}")
     private long tokenExpirationInMs;
 
     public WebSecurityConfig(UserService userService) {
         this.userService = userService;
-//        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
     }
 
     @Override
